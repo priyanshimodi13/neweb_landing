@@ -216,54 +216,7 @@ export default function Footer() {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
-            >
-              {/* Floating Frosted Glass Card at Bottom */}
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: '16px',
-                  left: '16px',
-                  right: '16px',
-                  background: 'rgba(30, 45, 30, 0.65)',
-                  backdropFilter: 'blur(16px)',
-                  WebkitBackdropFilter: 'blur(16px)',
-                  borderRadius: '16px',
-                  padding: '20px',
-                  border: '1px solid rgba(255, 255, 255, 0.25)',
-                  color: '#ffffff',
-                  textAlign: 'left',
-                }}
-              >
-                <h4
-                  style={{
-                    fontSize: '0.95rem',
-                    fontWeight: 500,
-                    lineHeight: 1.35,
-                    color: '#ffffff',
-                    marginBottom: '14px',
-                    letterSpacing: '-0.01em',
-                  }}
-                >
-                  CommerciaX is an agent orchestration platform designed to run an entire business.
-                </h4>
-                <a
-                  href="#get-started"
-                  style={{
-                    display: 'inline-block',
-                    background: '#ffffff',
-                    color: '#18181b',
-                    padding: '8px 16px',
-                    borderRadius: '8px',
-                    fontSize: '0.78rem',
-                    fontWeight: 600,
-                    textDecoration: 'none',
-                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.12)',
-                  }}
-                >
-                  Run a company
-                </a>
-              </div>
-            </div>
+            />
           </div>
         </div>
       </div>
