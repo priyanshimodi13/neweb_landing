@@ -181,7 +181,7 @@ export default function Showcase() {
 
             {/* Central Mindmap Visual Area */}
             <div style={{ position: 'relative', width: '100%', height: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <svg width="600" height="500" viewBox="0 0 600 500" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+              <svg width="600" height="500" viewBox="0 0 600 500" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', overflow: 'visible' }}>
                 
                 {/* Outer Concentric Dotted Circle */}
                 <circle cx="300" cy="270" r="170" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="3 3" fill="none" />
@@ -190,30 +190,13 @@ export default function Showcase() {
                 {departments.map((dept, index) => (
                   <line key={index} x1="300" y1="270" x2={dept.x} y2={dept.y} stroke="#cbd5e1" strokeWidth="1.2" strokeDasharray="4 4" />
                 ))}
-              </svg>
 
-              {/* Center Flower Node */}
-              <div
-                style={{
-                  position: 'absolute',
-                  left: '300px',
-                  top: '270px',
-                  transform: 'translate(-50%, -50%)',
-                  background: '#ffffff',
-                  borderRadius: '50%',
-                  width: '46px',
-                  height: '46px',
-                  border: '1px solid rgba(0, 0, 0, 0.1)',
-                  boxShadow: '0 4px 14px rgba(0, 0, 0, 0.06)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  zIndex: 10,
-                  cursor: 'pointer'
-                }}
-              >
-                <span style={{ fontSize: '1.35rem' }}>🌻</span>
-              </div>
+                {/* Center Flower Node - Rendered directly inside SVG for 100% exact alignment */}
+                <g transform="translate(300, 270)" style={{ cursor: 'pointer' }}>
+                  <circle r="23" fill="#ffffff" stroke="rgba(0, 0, 0, 0.12)" strokeWidth="1" style={{ filter: 'drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.08))' }} />
+                  <text x="0" y="7" textAnchor="middle" fontSize="22" style={{ userSelect: 'none' }}>🌻</text>
+                </g>
+              </svg>
 
               {/* 8 Radiating Department HTML Pill Nodes */}
               {departments.map((dept, index) => {
